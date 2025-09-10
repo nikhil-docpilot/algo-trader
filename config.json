@@ -1,0 +1,36 @@
+{
+  "kite_api_key": "your_api_key",
+  "kite_access_token": "your_access_token",
+
+  "date": "2024-09-20",
+  "start_time": "09:15:00",
+  "end_time": "15:30:00",
+  "mode": "simulation",
+  "data_format": "candles",
+  "comments" : [
+    "mode: live/simulation/paper",
+    "data_format: ticks/candles"
+  ],
+
+  "universe": [
+    {
+      "segment": "NSE",
+      "instruments": ["RELIANCE", "TCS", "INFY", "ICICI", "SBIN", "HDFCBANK", "KOTAKBANK"],
+      "number": 5
+    },
+    {
+      "segment": "NFO",
+      "instruments": ["NIFTY", "BANKNIFTY"],
+      "strikeRange": 10,
+      "expiry" : "2024-09-26"
+    }
+  ],
+
+  "risk_limits": {
+    "max_position_per_symbol": 2,
+    "max_total_exposure": 2000,
+    "stop_loss_pct": 0.02
+  },
+
+  "strategy": "libstrategy.so"
+}
